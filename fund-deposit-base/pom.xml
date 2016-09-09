@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -9,24 +8,24 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>fund-deposit-base</artifactId>
-	
+
 	<dependencies>
-        <dependency>
-            <groupId>com.somnus</groupId>
-            <artifactId>fund-deposit-support</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.somnus</groupId>
-            <artifactId>fund-deposit-message</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.somnus</groupId>
-            <artifactId>fund-deposit-config</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-    
+		<dependency>
+			<groupId>com.somnus</groupId>
+			<artifactId>fund-deposit-support</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.somnus</groupId>
+			<artifactId>fund-deposit-message</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.somnus</groupId>
+			<artifactId>fund-deposit-config</artifactId>
+			<version>${project.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 </project>
