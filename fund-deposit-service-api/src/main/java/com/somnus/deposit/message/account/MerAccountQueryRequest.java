@@ -6,7 +6,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.somnus.deposit.message.Message;
 
-
 public class MerAccountQueryRequest extends Message {
 
 	private static final long serialVersionUID = 1L;

@@ -55,9 +55,12 @@
 		<!-- jms -->
 		<geronimo.version>1.1.1</geronimo.version>
 		<!-- JDBC Driver -->
-		<jdbc.driver.groupId>com.oracle</jdbc.driver.groupId>
-		<jdbc.driver.artifactId>ojdbc14</jdbc.driver.artifactId>
-		<jdbc.driver.version>10.2.0.4.0</jdbc.driver.version>
+		<!-- <jdbc.driver.groupId>com.oracle</jdbc.driver.groupId> -->
+		<!-- <jdbc.driver.artifactId>ojdbc14</jdbc.driver.artifactId> -->
+		<!-- <jdbc.driver.version>10.2.0.4.0</jdbc.driver.version> -->
+		<jdbc.driver.groupId>mysql</jdbc.driver.groupId>
+        <jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
+        <jdbc.driver.version>5.1.27</jdbc.driver.version>
 		<jdbcdslog.version>1.0.6.2</jdbcdslog.version>
 		<!-- servlet & jsp & jstl -->
 		<servlet.version>2.5</servlet.version>
@@ -582,7 +585,7 @@
 								</includes>
 							</resource>
 						</webResources>
-						<warSourceDirectory>src/main/webapp</warSourceDirectory>
+						<warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
 						<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
 					</configuration>
 				</plugin>
