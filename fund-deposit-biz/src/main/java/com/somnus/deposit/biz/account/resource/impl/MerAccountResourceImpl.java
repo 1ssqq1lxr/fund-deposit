@@ -23,8 +23,7 @@ import com.somnus.deposit.support.common.MessageUtil;
 import com.somnus.deposit.support.exceptions.BizException;
 import com.somnus.rest.core.support.JsonUtils;
 
-
-@Path("/com.zdmoney.deposit.biz.account.resource.MerAccountResource")
+@Path("/com.somnus.deposit.biz.account.resource.MerAccountResource")
 @Validated
 @Component
 public class MerAccountResourceImpl implements MerAccountResource{

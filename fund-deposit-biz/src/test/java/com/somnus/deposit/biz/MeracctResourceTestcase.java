@@ -1,4 +1,4 @@
-package com.zdmoney.deposit.biz;
+package com.somnus.deposit.biz;
 
 import org.junit.Test;
 
