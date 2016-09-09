@@ -3,13 +3,6 @@ package com.somnus.deposit.support.util;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-/**   
- * @Title: SystemUtil
- * @Description: TODO
- * @author: cjliu
- * @date: 2012-9-13下午7:30:00
- * @version: 1.0  
- */
 public class SystemUtil {
 	private static String ip = null;
 	private static String machine = null;

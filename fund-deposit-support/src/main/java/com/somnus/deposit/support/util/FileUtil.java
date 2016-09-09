@@ -3,13 +3,6 @@ package com.somnus.deposit.support.util;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-/**   
- * @Title: FileUtil
- * @Description: TODO
- * @author: cjliu
- * @date: 2012-9-21下午1:53:20
- * @version: 1.0  
- */
 public class FileUtil {
 	/**
 	 * @Description: 读取文本文件的内容

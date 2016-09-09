@@ -2,7 +2,6 @@ package com.somnus.deposit.support.exceptions;
 
 import com.somnus.deposit.support.common.MsgCodeList;
 
-
 public class BizException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
 	private String errorCode;

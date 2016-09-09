@@ -37,7 +37,7 @@
 		<!-- log -->
 		<slf4j.version>1.7.2</slf4j.version>
 		<logback.version>1.0.6</logback.version>
-		<!-- commons tools-->
+		<!-- commons tools -->
 		<commons.lang3.version>3.1</commons.lang3.version>
 		<commons.compress>1.5</commons.compress>
 		<commons.io.version>2.3</commons.io.version>
@@ -70,6 +70,8 @@
 		<!-- alibaba -->
 		<alibaba.fastjson.version>1.2.16</alibaba.fastjson.version>
 		<alibaba.druid.version>1.0.25</alibaba.druid.version>
+		<!-- cxf -->
+		<cxf.version>2.7.7</cxf.version>
 
 		<!-- Plugins -->
 		<compiler.plugin.version>3.5.1</compiler.plugin.version>
@@ -171,6 +173,7 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 		</dependency>
+		
 	</dependencies>
 
 	<!-- 依赖管理 -->
@@ -191,6 +194,24 @@
 				<groupId>com.fasterxml.jackson.jaxrs</groupId>
 				<artifactId>jackson-jaxrs-json-provider</artifactId>
 				<version>${jackson.version}</version>
+			</dependency>
+
+			<!-- 加入cxf-webservice依赖包 -->
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-frontend-jaxws</artifactId>
+				<version>${cxf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-transports-http</artifactId>
+				<version>${cxf.version}</version>
+			</dependency>
+			<!-- 加入cxf-restful依赖包 -->
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+				<version>${cxf.version}</version>
 			</dependency>
 
 			<!-- spring -->
@@ -484,7 +505,7 @@
 				<artifactId>hibernate-validator</artifactId>
 				<version>${hibernate.validator.version}</version>
 			</dependency>
-			
+
 			<!-- alibaba -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
@@ -492,10 +513,11 @@
 				<version>${alibaba.druid.version}</version>
 			</dependency>
 			<dependency>
-    			<groupId>com.alibaba</groupId>
-    			<artifactId>fastjson</artifactId>
-    			<version>${alibaba.fastjson.version}</version>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${alibaba.fastjson.version}</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -538,32 +560,32 @@
 		<!-- 插件管理 -->
 		<pluginManagement>
 			<plugins>
-				<!-- 打war包插件  -->
-	            <plugin>
-	            	<groupId>org.apache.maven.plugins</groupId>
-	                <artifactId>maven-war-plugin</artifactId>
-	                <version>${source.plugin.version}</version>
-	                <configuration>
+				<!-- 打war包插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${source.plugin.version}</version>
+					<configuration>
 						<packagingExcludes>
-	                        WEB-INF/classes/logback-test.xml
-	                    </packagingExcludes>
+							WEB-INF/classes/logback-test.xml
+						</packagingExcludes>
 						<webResources>
 							<resource>
 								<!-- 是否过滤文件，也就是是否启动auto-config的功能 -->
 								<filtering>true</filtering>
 								<!-- 元配置文件的目录，相对于pom.xml文件的路径 -->
 								<directory>${basedir}/src/main/profile</directory>
-								<!-- 目标目录为WEB-INF -->  
+								<!-- 目标目录为WEB-INF -->
 								<targetPath>WEB-INF</targetPath>
-								<includes>  
-                                	<include>**/web.xml</include>  
-                            	</includes> 
-							</resource>  
+								<includes>
+									<include>**/web.xml</include>
+								</includes>
+							</resource>
 						</webResources>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
 						<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
 					</configuration>
-	            </plugin>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
@@ -621,29 +643,29 @@
 			<url>http://maven.oschina.net/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
-	
+
 	<profiles>
-        <profile>
-            <id>dev</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <profiles.active>dev</profiles.active>
-            </properties>
-        </profile>
-        <profile>
-            <id>sit</id>
-            <properties>
-                <profiles.active>sit</profiles.active>
-            </properties>
-        </profile>
-        <profile>
-            <id>prd</id>
-            <properties>
-                <profiles.active>prd</profiles.active>
-            </properties>
-        </profile>
-    </profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<profiles.active>dev</profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>sit</id>
+			<properties>
+				<profiles.active>sit</profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>prd</id>
+			<properties>
+				<profiles.active>prd</profiles.active>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>

@@ -9,7 +9,6 @@ import com.somnus.deposit.support.exceptions.BizException;
 import com.somnus.deposit.support.holder.ApplicationContextHolder;
 import com.somnus.deposit.support.util.ValidateUtil;
 
-
 public class CheckUtil {
 	/**
 	 * @Title:mustEmpty

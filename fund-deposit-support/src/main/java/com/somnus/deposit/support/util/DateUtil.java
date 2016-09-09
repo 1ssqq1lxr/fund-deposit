@@ -8,11 +8,6 @@ import java.util.Date;
 
 import org.apache.commons.lang3.time.DateUtils;
 
-/**
- * @Description: 日期时间工具类
- * @author yemulin
- * @create 2012-8-9 下午5:26:26
- */
 public class DateUtil {
 
 	/**

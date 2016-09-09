@@ -8,7 +8,6 @@ import org.springframework.jms.listener.adapter.MessageListenerAdapter;
 import com.somnus.deposit.support.common.Constants;
 import com.somnus.deposit.support.util.SessionUtil;
 
-
 public abstract class AbstractJmsReceiveTemplate extends MessageListenerAdapter {
 
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());

@@ -68,5 +68,15 @@
 		<servlet-name>jersey</servlet-name>
 		<url-pattern>/resource/*</url-pattern>
 	</servlet-mapping>
+	
+	<!-- cxf WebService服务 -->
+	<servlet>
+		<servlet-name>cxfService</servlet-name>
+		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cxfService</servlet-name>
+		<url-pattern>/cxf/*</url-pattern>
+	</servlet-mapping>
 
 </web-app>

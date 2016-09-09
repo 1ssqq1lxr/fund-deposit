@@ -25,8 +25,8 @@
                         <sourceDirector>
                             <directory>${project.parent.basedir}/**/src/main/java</directory>
                             <includes>
-                                <include>com/zdmoney/deposit/biz/**/resource/*.java</include>
-                                <include>com/zdmoney/deposit/message/**/*.java</include>
+                                <include>com/somnus/deposit/biz/**/resource/*.java</include>
+                                <include>com/somnus/deposit/message/**/*.java</include>
                             </includes>
                         </sourceDirector>
                     </sourceDirectors>

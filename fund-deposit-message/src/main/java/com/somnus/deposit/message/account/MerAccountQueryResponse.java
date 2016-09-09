@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.somnus.deposit.message.Message;
 
-
 public class MerAccountQueryResponse extends Message {
 	
 	private static final long serialVersionUID = 1L;
