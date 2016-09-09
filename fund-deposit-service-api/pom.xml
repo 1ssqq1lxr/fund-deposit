@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.somnus</groupId>
+		<artifactId>fund-deposit</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>fund-deposit-service-api</artifactId>
+	
+	<properties>
+        <extract-maven-plugin.version>1.0.14</extract-maven-plugin.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.somnus.plugin</groupId>
+                <artifactId>extract-maven-plugin</artifactId>
+                <version>${extract-maven-plugin.version}</version>
+                <configuration>
+                    <sourceDirectors>
+                        <sourceDirector>
+                            <directory>${project.parent.basedir}/**/src/main/java</directory>
+                            <includes>
+                                <include>com/zdmoney/deposit/biz/**/resource/*.java</include>
+                                <include>com/zdmoney/deposit/message/**/*.java</include>
+                            </includes>
+                        </sourceDirector>
+                    </sourceDirectors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>extract</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        
+        <pluginManagement>
+			<plugins>
+            	<plugin>
+                	<groupId>org.eclipse.m2e</groupId>
+                	<artifactId>lifecycle-mapping</artifactId>
+                	<version>1.0.0</version>
+                	<configuration>
+                    	<lifecycleMappingMetadata>
+                        	<pluginExecutions>
+                            	<pluginExecution>
+                                	<pluginExecutionFilter>
+                                    	<groupId>com.somnus.plugin</groupId>
+                                    	<artifactId>extract-maven-plugin</artifactId>
+                                    	<versionRange>[1.0.14,)</versionRange>
+                                    	<goals>
+                                        	<goal>compile</goal>
+                                        	<goal>extract</goal>
+                                    	</goals>
+                                	</pluginExecutionFilter>
+                                	<action>
+                                    	<execute />
+                                	</action>
+                            	</pluginExecution>
+                        	</pluginExecutions>
+                    	</lifecycleMappingMetadata>
+                	</configuration>
+            	</plugin>
+        	</plugins>
+    	</pluginManagement>
+    </build>
+</project>
